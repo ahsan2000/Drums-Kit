@@ -58,7 +58,7 @@ footer {
 }
 
 .set {
-  margin: 10% auto;
+  margin: 7% auto 5% auto;
 }
 
 .game-over {
@@ -73,6 +73,11 @@ footer {
 
 .red {
   color: red;
+}
+
+.fa-instagram {
+  color: #dbedf3;
+  margin-left: 0.2em;
 }
 
 .drum {
@@ -91,4 +96,16 @@ footer {
   text-align: center;
   margin: 10px;
   background-color: white;
+}
+
+.socials-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #dbedf3;
+  font-family: sans-serif;
+}
+
+.fa-instagram:hover {
+  color: rgb(235, 13, 235);
 }
