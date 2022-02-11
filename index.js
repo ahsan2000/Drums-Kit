@@ -1,19 +1,15 @@
-var numberOfDrumsButtons = document.querySelectorAll(".drum").length;
-
 // make sound by clicking
-for (var i = 0; i < numberOfDrumsButtons; i++){
-    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
-        var buttonInnerHTML = this.innerHTML;
-        makeSound(buttonInnerHTML);
-        buttonAnimation(buttonInnerHTML);
-    });
-}
+$(".drum").click(function () { 
+    var buttonInnerHTML = this.innerHTML;
+    makeSound(buttonInnerHTML);
+    buttonAnimation(buttonInnerHTML);
+});
 
 // make sound my keyboard
-document.addEventListener("keydown", function(event){
-    makeSound(event.key);
-    buttonAnimation(event.key);
-})
+$("body").keydown(function (e) { 
+    makeSound(e.key);
+    buttonAnimation(e.key);
+});
 
 // function to create sound on both responses
 function makeSound(key){
@@ -52,10 +48,10 @@ function makeSound(key){
 }
 
 // function for animation on pressed
-
 function buttonAnimation(currentKey){
     var activeButton = document.querySelector("." + currentKey);
     activeButton.classList.add("pressed");
+
     // setting timer to remove class from button
     setTimeout(function(){
         activeButton.classList.remove("pressed");
